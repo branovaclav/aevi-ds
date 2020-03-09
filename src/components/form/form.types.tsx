@@ -1,0 +1,1 @@
+export enum InputMode { simple, complexEmpty, complexFilledIn, complexActive };
