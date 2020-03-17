@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { rgba } from 'polished';
+import { rgba, darken } from 'polished';
 import { colors } from '../../common/global-style';
 import { InputMode } from './form.types';
 
@@ -10,12 +10,6 @@ export const StyledInputContainer = styled.div<{ width?: string, disabled?: bool
     ${props => props.width !== undefined && css`
             width: ${props.width};
     `};
-
-    ${props => !props.disabled && css`
-        &:hover label {
-            color: var(--accent-color);
-        }
-    `}
 `;
 
 export const StyledLabel = styled.label<{ mode: InputMode, disabled?: boolean }>`
@@ -51,6 +45,11 @@ export const StyledInput = styled.input<{ width?: string, mode: InputMode }>`
     border: solid 1px var(--input-line-color);
     border-radius: var(--border-radius);
     background-color: var(--input-fill-color);
+
+
+    &:hover {
+        border-color: ${darken(.08, colors.inputLine)};
+    }
 
     &:focus {
         border-color: ${rgba(colors.accent, .1)};

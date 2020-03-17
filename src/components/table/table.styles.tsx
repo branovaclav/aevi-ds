@@ -46,7 +46,6 @@ export const StyledTr = styled.tr<StyledTrProps>`
 	transition: all var(--short-delay) linear;
 
 	td { border-top-color: var(--table-line-color); }
-	/* &:first-child td { border-top-color: transparent; } */
 
 	${props => props.selectable && css`
 		&:hover {

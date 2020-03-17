@@ -102,3 +102,9 @@ export const SimpleTable = () => (
 export const GroupedTable = () => (
 	<SampleTable items={24} grouped />
 )
+
+export const ExpandableTable = () => (
+	<div>
+		Work in progress...
+	</div>
+)
